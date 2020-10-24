@@ -7,3 +7,8 @@ Examples for complete react:
 
 https://github.com/stolenng
 
+
+npx sb init
+
+yarn add @storybook/addon-knobs --dev
+

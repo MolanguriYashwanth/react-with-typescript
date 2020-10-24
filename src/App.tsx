@@ -69,12 +69,23 @@ import React from 'react';
 // import Counter from "./Counter";
 import { TodoList } from "./mobx-react/components/TodoList";
 import { TodoNew } from "./mobx-react/components/TodoNew";
+import { TodoList as listStore } from "./mobx-react/stores/TodoList";
+import { StoreProvider } from "./mobx-react/helpers/storeProvider";
+
+
+const todoList = new listStore([
+  'Should Starting Writing in React',
+  'Should Learn MobX',
+  'Should Watch Naruto :)'
+]);
 
 const App = () => {
   return (
     <div>
-      <TodoNew />
-      <TodoList />
+      <StoreProvider value={todoList}>
+        <TodoNew />
+        <TodoList />
+      </StoreProvider>
     </div>
 
   );
