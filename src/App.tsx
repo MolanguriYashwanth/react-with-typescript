@@ -71,7 +71,7 @@ import { TodoList } from "./mobx-react/components/TodoList";
 import { TodoNew } from "./mobx-react/components/TodoNew";
 import { TodoList as listStore } from "./mobx-react/stores/TodoList";
 import { StoreProvider } from "./mobx-react/helpers/storeProvider";
-
+import JSONTestForm from './jsonschemaForm';
 
 const todoList = new listStore([
   'Should Starting Writing in React',
@@ -86,6 +86,7 @@ const App = () => {
         <TodoNew />
         <TodoList />
       </StoreProvider>
+      <JSONTestForm/>
     </div>
 
   );
